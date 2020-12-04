@@ -34,6 +34,7 @@ app.post('/usuario', function(req, res) {
       let body = req.body;
       let usr = new Usuario({
           nombre: body.nombre,
+          apellido: body.apellido,
           email: body.email,
           password: bcrypt.hashSync(body.password, 10)
       });
